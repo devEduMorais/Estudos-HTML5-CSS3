@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 12</title>
+    <link rel="shortcut icon" href="../../../static/favicon.ico" type="image/x-icon">
+    <style>
+        body{
+            background-color: rgb(122, 174, 204);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Imagem dinâmica</h1>
+    <p><strong>Tente abrir esse site em vários dispositivos diferentes ou simplesmente aumente e diminua o tamanho do seu navegador</strong></p>
+
+    <picture>
+        <source media="(max-width: 750px)" srcset="images/imagem-p.png" type="image/png">
+        <source media="(max-width: 1050px )" srcset="images/imagem-m.png" type="image/png">
+        <img src="images/imagem-g.png" alt="Imagem flexivel">
+    </picture>
+    
+    <h1>Reproduzindo Áudio</h1>
+    <p>Vamos aprender a reproduzir áudios em HTML5</p>
+    <audio preload="metadata" controls loop>
+        <source src="media/Twinkle - The Grey Room _ Density & Time.mp3" type="audio/mpeg">
+        <p>Infelizmente seu navegador não consegue reproduzir este áudio. <a href="media/Twinkle - The Grey Room _ Density & Time.mp3">Clique aqui para baixar o arquivo MP3</a></p>
+    </audio>
+    <hr>
+    <h1>Inserindo vídeos hospedados localmente</h1>
+    <p>Este vídeo está hosperado no meu próprio servidor.</p>
+    
+    <video width="700" poster="images/moto-foda-thumb.png" controls loop>
+        <source src="media/video.webm" type="video/webm">
+        <source src="media/video.mp4" type="video/mp4">
+        <p>Seu navegador não tem compatibilidade com reprodução de vídeos.</p>
+    </video>
+
+    <h1>Inserindo videos do Youtube</h1>
+    <iframe width="700" height="525" src="https://www.youtube.com/embed/OzUnqQk4eOg?si=iN8tZ3-nJZViFnXQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <br>
+    <h1>Inserindo videos do Vimeo</h1>
+    <iframe src="https://player.vimeo.com/video/195906647?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="700" height="525" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="Animation Reel 2016"></iframe>
+
+</body>
+</html>

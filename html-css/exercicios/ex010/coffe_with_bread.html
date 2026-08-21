@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site do Eduardo</title>
+    <link rel="shortcut icon" href="../../../static/favicon.ico" type="image/x-icon">
+    <style>
+        /* Reset para evitar barra de rolagem horizontal */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #66707c;
+            color: #ffffff;
+            font-family: 'Times New Roman', Times, serif, sans-serif;
+            text-align: center;
+            padding: 20px 15px;
+        }
+
+        h1 {
+            margin-top: 10px;
+            font-size: 1.8rem;
+        }
+
+        /* Contêiner flexível para alinhar as imagens lado a lado */
+        .container-imagens {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        img {
+            /* Tamanho padrão para computador */
+            width: 100%;
+            max-width: 380px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        /* --- Estilo do Botão de Deslize (Toggle Switch) --- */
+        .switch {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 34px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .slider {
+            background-color: #2196F3;
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+
+        /* --- Regras específicas para celulares (telas de até 600px) --- */
+        @media (max-width: 600px) {
+            /* Move o botão para cima do título sem sobrepor */
+            .switch {
+                position: static;
+                margin: 0 auto 15px auto;
+                display: block;
+            }
+
+            /* Reduz as imagens para que fiquem lado a lado no celular */
+            .container-imagens {
+                gap: 10px;
+            }
+
+            img {
+                max-width: calc(50% - 10px); /* Ocupa metade da tela cada uma */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Botão de Deslize -->
+    <label class="switch">
+        <input type="checkbox" id="botao-trabalho">
+        <span class="slider"></span>
+    </label>
+
+    <h1 id="titulo"></h1>
+
+    <!-- Contêiner dinâmico para 1 ou 2 imagens -->
+    <div id="container-imagens" class="container-imagens"></div>
+
+    <script>
+        let trabalho = 0;
+
+        const elTitulo = document.getElementById("titulo");
+        const elContainerImagens = document.getElementById("container-imagens");
+        const elBotao = document.getElementById("botao-trabalho");
+
+        function atualizarStatus() {
+            if (trabalho) {
+                elTitulo.innerText = "Estamos trabalhando";
+                
+                elContainerImagens.innerHTML = `
+                    <img src="https://static9.depositphotos.com/1001911/1174/v/950/depositphotos_11744967-stock-illustration-emoticon-with-computer.jpg" alt="Trabalhando1">
+                    <img src="https://media.tenor.com/HCbWEaJJ9s8AAAAM/typing-typing-emoji.gif" alt="Trabalhando2">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSc9HZaOQ5ADjCN8YdoXYNPfAj9bepqEjInOLn_YyX1un4_GEygoptCKWc&s=10" alt="Trabalhando3">
+                `;
+            } else {
+                elTitulo.innerText = "Já voltamos, momento coffee with bread";
+                
+                elContainerImagens.innerHTML = `
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxX6hPgdH3LaoVz5dmhdxsp2dFFOXmz_X7nzUJo0H5rEpL0EmJS6e5rLVO&s=10" alt="Café 1">
+                    <img src="https://media1.tenor.com/m/2GBK8X7jSP8AAAAd/rat-eats-mm-rat.gif" alt="Café 2">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDyNSzNYTziQ5xDaRjm_dm55hPLgRag-DvDdMQ-cSQMKdISDB0I_Q-J8Qu&s=10" alt="Café 3">
+                `;
+            }
+        }
+
+        atualizarStatus();
+
+        elBotao.addEventListener("change", function() {
+            trabalho = this.checked ? 1 : 0;
+            atualizarStatus();
+        });
+    </script>
+    
+</body>
+</html>

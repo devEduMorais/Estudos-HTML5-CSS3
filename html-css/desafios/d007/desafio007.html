@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 07</title>
+    <link rel="shortcut icon" href="../../../static/images/favicon.ico" type="image/x-icon">
+    <style>
+        body{
+            background-color: rgb(110, 148, 162);
+            color: rgb(255, 255, 255);
+        }
+    </style>
+</head>
+<body>
+    <h1 style="font-size: 50px;">DESAFIO 07</h1>
+    <h2 style="font-size: 30px;">O intuito do desafio é criar um site cujas imagens se adaptem ao tamanho da tela<br></h2>
+    <hr>
+    <br>
+    <!-----------------------DESAFIO--------------------->
+    <h1>Imagem Flexível</h1>
+    <p><strong>Você está vendo a imagem completa? Experimente ampliar o tamanho da <br>sua janela para aproveitar melhor a experiência &#x1F92F;</strong></p>
+
+    <picture>
+        <source media="(max-width: 750px)" srcset="https://github.com/gustavoguanabara/html-css/blob/master/desafios/modulo-01/d007/imagens/paisagem-p.png?raw=true">
+
+        <source media="(max-width: 1050px)" srcset="https://github.com/gustavoguanabara/html-css/blob/master/desafios/modulo-01/d007/imagens/paisagem-m.png?raw=true">
+
+        <img src="https://github.com/gustavoguanabara/html-css/blob/master/desafios/modulo-01/d007/imagens/paisagem-g.png?raw=true" alt="imagem">
+    </picture>
+    <!--------------------------------------------------->
+    <br>
+    <hr>
+    <p><br>Link referência para o <a href="https://github.com/gustavoguanabara/html-css/blob/master/desafios/modulo-01/d007/desafio-imagem-flexivel.pdf" target="_blank" rel="external">Desafio 07</a></p>
+    <p>Voltar para a <a href="../index.html" rel="prev">página inicial</a></p>
+</body>
+</html>
