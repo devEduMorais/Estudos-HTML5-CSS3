@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes externas baixadas</title>
+    <style>
+        @font-face {
+            font-family: 'CELTG';
+            src: url('fonts/celtic_garamond_2nd/CELTG___.TTF') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            /*
+                Tipos de format()
+                -opentype (otf)
+                -truetype (ttf)
+                embedded-opentype
+                -truetype-aat (Apple Advanced Typography)
+                -svg
+            */
+        }
+        @font-face {
+            font-family: 'Old London';
+            src: url('fonts/old_london/OldLondon.ttf');
+            font-weight: normal;
+            font-style: normal;
+        }
+        body{
+            font-family: 'CELTG',Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            color: black;
+        }
+        h1{
+            font-family: 'Old London', Times, serif;
+            font-size: 3em;
+        }
+        h2{
+            font-family: 'Old London', Times, serif;
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Título</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae tempore maiores ullam ducimus itaque quam, magnam nulla blanditiis asperiores voluptatem reprehenderit, officiis libero illum amet ab earum fuga porro in.</p>
+    
+    <h2>Subtítulo</h2>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto quia velit corporis reprehenderit, temporibus iure beatae. Illum dicta nesciunt natus. Aperiam quasi, aspernatur nostrum eaque beatae impedit numquam earum minima!</p>
+</body>
+</html>
