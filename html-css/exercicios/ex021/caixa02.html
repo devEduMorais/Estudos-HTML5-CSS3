@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grouping Tags</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background-color: dimgray;
+            margin: 0px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        header {
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+        }
+        nav{
+            background-color: rgb(170, 163, 163);
+            padding: 3px;
+            box-shadow: -1px -1px 10px 1px rgba(0, 0, 0, 0.39);
+        }
+        nav > a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            margin-right: 30px;
+        }
+        main {
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+            flex: 1;
+            border-radius: 10px
+        }
+        article {
+            background-color: lightgray;
+        }
+        article > aside {
+            background-color: gray;
+            padding: 5px;
+        }
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 1px;
+            margin: 1px;
+        }
+        div#bola {
+            height: 200px;
+            width: 200px;
+            margin: 20px;
+            background-color: white;
+            border-radius: 50%;
+        }
+        div#bola2 {
+            height: 100px;
+            width: 100px;
+            background-color: black;
+            border-radius: 50%;
+        }
+
+        div#bola > div#bola2 {
+            margin: 50px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Meu Site</h1>
+        <nav>
+            <a href="#">Início</a></li>
+            <a href="#">Sobre</a></li>
+            <a href="#">Contato</a></li>
+        </nav>
+    </header>
+    <main>
+        <section id="assuntos">
+            <p>Esportes política e Tecnologia.</p>
+        </section>
+        <section id="noticias">
+            <article>
+                <h2>Notícia sobre o Brasil</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut ullam, perspiciatis molestiae id eligendi, accusantium est vero excepturi eius, beatae eum? Velit architecto sint minima debitis doloribus atque ex. Iusto!</p>
+               <!--<p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, officiis numquam atque libero enim id? Quam architecto ullam voluptatum? Laborum repellat nesciunt adipisci? Ratione eum provident, blanditiis necessitatibus quas excepturi.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate molestias laudantium asperiores a est nisi eligendi ipsum, exercitationem magni delectus quibusdam quisquam. Aperiam dolores doloremque error ad a harum maxime! Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis inventore voluptatem optio exercitationem unde dolor magnam, est repellat officiis aut aliquid accusamus corporis tenetur expedita recusandae cum saepe facilis veniam. lorem
+
+                </p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae voluptas deserunt, magnam sunt ipsam debitis ex minus laborum necessitatibus tempora praesentium excepturi molestiae aspernatur consequuntur consequatur, temporibus eos qui expedita!</p>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, quos. Dolore, culpa corrupti in facere voluptatem sed hic eligendi, architecto ullam voluptatum consequatur eos exercitationem? Quisquam perferendis necessitatibus dolorem. Iure.
+                </p>
+                <h2>Subtitulo</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, sed libero iste quasi obcaecati incidunt iure laudantium voluptates tenetur omnis ducimus id unde vel provident. Nisi omnis nemo numquam sunt. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt assumenda voluptatibus necessitatibus, quos natus veritatis corrupti, sint vel molestias voluptate sit illum commodi ipsum nihil iure deleniti nesciunt repellendus cupiditate.</p>-->
+                <aside>
+                    <p>Artigo escrito por Eduardo Morais</p>
+                </aside>
+            </article>
+            <article>
+
+            </article>
+            
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 Meu Site. Todos os direitos reservados.</p>
+    </footer>
+
+    <div id="bola">
+        <div id="bola2"></div>
+            
+        </div>
+    </div>
+</body>
+</html>
