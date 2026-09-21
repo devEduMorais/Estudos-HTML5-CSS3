@@ -9,9 +9,11 @@ Tentando ver se algo sai daqui
 
     WhatFontIS: whatfontis.com - site pra detectar a fonte passada uma imagem
 
+    WireFramePro: mockflow.com/wireframepro/ - site para montar layouts e wireframes antes mesmo de começar a desenvolver o site.
+
     ------------------------------------------------------------------------------------------------------------------------------------
 
-    #Extensões?
+    #Extensões:
         Colorzilla - Útil para buscar a cor utilizada em um site/arquivo com precisão.
         FontNija - Útil para detectar as fontes utilizadas no site
     
